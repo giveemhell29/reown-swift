@@ -145,8 +145,8 @@ jobs:
       # continue-on-error so a reset hiccup can't fail an otherwise-green run.
       # It signs a transaction, so it's a Node step (not a Maestro runScript); the
       # private key goes via env, never the CLI.
-      - name: Reset USDT Permit2 allowance (Polygon)
-        if: always()
+      - name: Reset gUSDT Permit2 allowance (Polygon)
+        if: always(0)
         continue-on-error: true
         uses: WalletConnect/actions/maestro/permit2-reset@4be7c0112f9651fc63b18c137650b75d2fc9b200
         with:
